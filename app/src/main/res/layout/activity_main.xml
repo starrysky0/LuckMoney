@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg4"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开启抢红包" />
+
+                <Switch
+                    android:id="@+id/swWx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢完返回位置" />
+
+
+                <RadioGroup
+                    android:id="@+id/radio"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/radiobutton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="聊天列表" />
+                    <RadioButton
+                        android:id="@+id/radiobutton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="联系人" />
+
+                    <RadioButton
+                        android:id="@+id/radiobutton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="桌面" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂停抢红包" />
+
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+                <CheckBox
+                    android:id="@+id/ckPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="第一次抢红包会测试手机性能，以确定是否需要开启下面的两项时间功能" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/ll_wait_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="等待红包弹窗时间(少部分机型受网速和性能影响，需要增加时间保证能点击开红包按钮，不会影响实际抢红包速度，建议值200ms左右)" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/tv_wait_time"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="200ms" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/ll_wait_open_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="领取等待时间(少部分机型受网速和性能影响,需要增加时间保证流畅性，不会影响实际抢红包速度，建议值大于500ms)" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/tv_wait_open_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="500ms" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="仅供娱乐，请合理使用，使用者自行承担随之而来的各种风险，包括但不限于“禁用红包功能”、“微信封号”" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
+
+
